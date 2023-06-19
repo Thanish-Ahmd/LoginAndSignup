@@ -74,3 +74,8 @@ input {
   width: 50%;
   font-size: larger;
 }
+
+.welcome-text {
+  margin-left: 10px;
+  margin-right: 10px;
+}

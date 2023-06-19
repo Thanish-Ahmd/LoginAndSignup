@@ -14,11 +14,11 @@ const Login = () => {
 
                     <input type="text" name="" id="" placeholder='Email' /> <br /> <br />
 
-                    <input type="text" name="" id="" placeholder='Password' /> <br /> <br />
+                    <input type="password" name="" id="" placeholder='Password' /> <br /> <br />
 
                     <button id='login-button'>Login</button> <br /> <br />
 
-                    <p>Don't have an account? <a href="">signup</a></p> 
+                    <p>Don't have an account? <a href="/signup">signup</a></p> 
 
                 </form>
 
@@ -27,7 +27,7 @@ const Login = () => {
             <div id='login-message'>
                 <div>
                 <h2>Welcome !!</h2> <br />
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem voluptate ipsa modi! Provident ratione explicabo aliquam quo quisquam ipsa quod odit laudantium itaque! Quidem mollitia animi perferendis ex dolor commodi!</p>
+                <p className='welcome-text' >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem voluptate ipsa modi! Provident ratione explicabo aliquam quo quisquam ipsa quod odit laudantium itaque! Quidem mollitia animi perferendis ex dolor commodi!</p>
 
                 </div>
             </div>
