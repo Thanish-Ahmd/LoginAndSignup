@@ -18,7 +18,7 @@ const Signup = () => {
 
                     <button id='login-button'>Sign up</button> <br /> <br />
 
-                    <p>Already have an account? <a href="/">login</a></p> 
+                    <p>Already have an account? <a href="/login">login</a></p> 
 
                 </form>
 
