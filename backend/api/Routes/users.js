@@ -6,7 +6,7 @@ const secretKey = 'hey';
 
 router.route("/add").post( async (req, res) => {
 
-
+    
     const email = req.body.email ;
     const password = req.body.password ;
     
@@ -46,6 +46,15 @@ router.route("/").get( (req, res)=> {
 })
 
 router.route("/check").get(async (req, res)=> {
+
+    let num = "" ;
+
+    num += Math.floor( Math.random() * 10 ) ;
+    num += Math.floor( Math.random() * 10 ) ;
+    num += Math.floor( Math.random() * 10 ) ;
+    num += Math.floor( Math.random() * 10 ) ;
+
+    console.log(num)
 
     const token = req.headers.authorization ;
     console.log(token) ;

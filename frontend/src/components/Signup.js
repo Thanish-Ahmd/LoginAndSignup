@@ -7,7 +7,11 @@ const Signup = () => {
     const [password , setPassword ] = useState("") ;
     const [cpassword , setCpassword] = useState("") ;
 
+   
+
     function register(e) {
+
+        
         e.preventDefault() ;
 
         const  newUser = {
@@ -35,7 +39,7 @@ const Signup = () => {
         <div id='login-container'  >
             <div id='login-form-container' >
                 
-                <form action="" id='login-form' onSubmit={register}>
+                <form action="" id='login-form' >
                     <h1>Sign up</h1> <br /> <br />
 
                     <input type="text" name="" id="" placeholder='Email' onChange={(e)=> {setEmail(e.target.value)}} /> <br /> <br />
@@ -43,8 +47,9 @@ const Signup = () => {
                     <input type="password" name="" id="" placeholder='Password' onChange={(e)=> {setPassword(e.target.value)}} /> <br /> <br />
 
                     <input type="password" placeholder='Confirm password' onChange={(e)=>{setCpassword(e.target.value)}} /> <br /> <br />
-
-                    <button id='login-button'>Sign up</button> <br /> <br />
+                   
+                    {/* {isDivVisible && <div>This div is now visible!</div>} <button onClick={setDivVisibility(true)}>click</button> */}
+                    <button id='login-button' >Signup</button> <br /> <br />
 
                     <p>Already have an account? <a href="/login">login</a></p> 
 
