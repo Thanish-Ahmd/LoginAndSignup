@@ -1,6 +1,6 @@
 const router  = require("express").Router() ;
 let User = require("../Models/User") ; 
-
+const nodemailer = require('nodemailer');
 const jwt = require('jsonwebtoken');
 const secretKey = 'hey';
 
@@ -45,7 +45,21 @@ router.route("/").get( (req, res)=> {
 
 })
 
-router.route("/check").get(async (req, res)=> {
+
+router.route("/sendOtp").post(async (req, res) => {
+
+    const email = req.body.email  ;
+
+    console.log(req.body)
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.zoho.com',
+        port: 465,
+        secure: true,
+        auth: {
+            user: 'dentalclinicitp@zohomail.com',
+            pass: 'Culer@123'
+        }
+    });
 
     let num = "" ;
 
@@ -55,6 +69,32 @@ router.route("/check").get(async (req, res)=> {
     num += Math.floor( Math.random() * 10 ) ;
 
     console.log(num)
+
+
+    const mailOptions = {
+        from: 'dentalclinicitp@zohomail.com',
+        to: `${email}`,
+        subject: 'User Registration Verification',
+        text: `Hello User , \n This is your OTP for your email verification /nOTP - ${num} /n/n Thank you` 
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
+
+    res.status(200).send({ rst : "sent" , otp: num });
+    
+    
+
+})
+
+router.route("/check").get(async (req, res)=> {
+
+    
 
     const token = req.headers.authorization ;
     console.log(token) ;

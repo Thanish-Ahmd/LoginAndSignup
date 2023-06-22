@@ -61,9 +61,9 @@ const Login = () => {
                 <form action="" id='login-form' onSubmit={login}>
                     <h1>Login</h1> <br /> <br />
 
-                    <input type="text" name="" id="" placeholder='Email' onChange={(e)=> {setEmail(e.target.value)}} required /> <br /> <br />
+                    <input className='input-fields' type="text" name="" id="" placeholder='Email' onChange={(e)=> {setEmail(e.target.value)}} required /> <br /> <br />
 
-                    <input type="password" name="" id="" placeholder='Password' onChange={(e)=>{setPassword(e.target.value)}} required/> <br /> <br />
+                    <input className='input-fields' type="password" name="" id="" placeholder='Password' onChange={(e)=>{setPassword(e.target.value)}} required/> <br /> <br />
 
                     <button id='login-button'>Login</button> <br /> <br />
 

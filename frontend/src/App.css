@@ -57,7 +57,7 @@
   
 }
 
-#login-button{
+#login-button , #verify-button{
   background: linear-gradient(to right , #833ab4, #fd1d1d , #fcb045);
   width: 40%;
   border: 0;
@@ -67,7 +67,17 @@
 }
 
 
-input {
+#cancel-button {
+  background: linear-gradient(to right , #ff4b1f, #ff9068);
+  width: 40%;
+  border: 0;
+  color: whitesmoke;
+  height: 40px;
+  border-radius: 5px;
+}
+
+
+.input-fields {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
@@ -79,3 +89,17 @@ input {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+
+.otp-input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: larger;
+  margin: 5px;
+
+
+
+}
+
+
